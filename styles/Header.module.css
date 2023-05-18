@@ -1,0 +1,59 @@
+.header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 16px 12px;
+    border-bottom: 1px solid var(--color-switch);
+    justify-content: space-between;
+    border-color: rgba(var(--secondary-color), 0.5);
+}
+.header::after {
+    content: 'Shashwat';
+    display: none;
+}
+.header:hover .header::after {
+    display: block;
+}
+.logo {
+    display: flex;
+    column-gap: 8px;
+}
+.logo svg {
+    width: 28px;
+    height: 28px;
+}
+.logo h3 {
+    margin: 0;
+}
+.navItems {
+    text-align: left;
+    top: 0;
+    right: 0;
+}
+.navItems ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.navItem {
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.navItem::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--color-switch);
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+}
+.navItem:hover::after {
+    transform: scaleX(1);
+}
